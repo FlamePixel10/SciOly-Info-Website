@@ -2,25 +2,10 @@ body {
     max-width: 1000px;
     margin: auto;
     font-family: Roboto, sans-serif;
-    background-image: url('images/background-image.png');
-    background-size: cover;
+    background: url('images/background-image.png') center/cover;
 }
 
-.header {
-    background-color: #0080ff;
-    padding: 20px;
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    border-radius: 25px;
-}
-
-.h-flexbox {
-    display: flex;
-    justify-content: left;
-    padding: 10px;
-    font-family: Roboto, sans-serif;
-}
-
+/* General utility classes */
 .center {
     text-align: center;
 }
@@ -29,51 +14,73 @@ body {
     padding: 0 10px;
 }
 
+.right-align {
+    margin-left: auto;
+}
+
+/* Header & Footer */
+.header,
+.footer {
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    background-color: #0080ff;
+}
+
+.footer {
+    background-color: #00172e;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    color: #a6a6a6;
+    text-decoration: underline;
+}
+
+/* Navigation / Flexbox */
+.h-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* left alignment */
+}
+
 .nav-item {
     padding: 5px 10px;
     border-radius: 25px;
     background-color: bisque;
 }
 
-.footer {
-    background-color: #00172e;
-    padding: 20px;
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    border-radius: 25px;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer a {
-    color: rgb(166, 166, 166);
-    text-decoration: underline;
-}
-
+/* Content box */
 .content {
     background-color: azure;
     padding: 20px;
     margin: 20px 0;
+    border: 1px solid black;
     border-radius: 25px;
-    border-color: black;
-    border-style: solid;
 }
 
-/* Dropdown Button */
+/* Dropdown */
 .dropbtn {
-    background-color: #3498DB;
+    background-color: #3498db;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
+    border-radius: 10px;
+    margin: 10px 0;
     cursor: pointer;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: #2980B9;
+    background-color: #2980b9;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -88,7 +95,8 @@ body {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
